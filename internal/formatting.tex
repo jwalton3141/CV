@@ -1,0 +1,22 @@
+% Make margins wider
+\geometry{left=15mm, right=15mm, top=15mm, bottom=15mm}
+
+% Remove page numbers
+\pagenumbering{gobble}
+
+\hypersetup{
+	% Remove box from links
+	colorlinks=true,
+	% Colour of url links
+	urlcolor=textcolour
+}
+
+% Set up colours to use
+\definecolor{themecolour}{rgb}{0.858, 0.188, 0.478}
+\definecolor{textcolour}{HTML}{373D3F}
+\color{textcolour}
+
+% No indent on itemize
+\setlist[itemize]{leftmargin=*,
+		  topsep=1.5mm,
+		  parsep=1.5mm}

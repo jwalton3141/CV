@@ -1,0 +1,91 @@
+\newcommand{\name}[1]{%
+	\begin{center}
+		\huge{\textbf{\uppercase{#1}}}
+	\end{center}\vspace{-2mm}\par
+}
+
+\newcommand*{\email}[1]{\def\email{#1}}
+\newcommand*{\site}[1]{\def\site{#1}}
+\newcommand*{\loc}[1]{\def\loc{#1}}
+\newcommand*{\linkedin}[1]{\def\linkedin{#1}}
+\newcommand*{\phone}[1]{\def\phone{#1}}
+
+\newcommand*{\setemail}{%
+	\textcolor{themecolour}{\faEnvelope}%
+	\hspace{1pt} \href{mailto:\email}{\email}
+}
+
+\newcommand*{\setsite}{%
+	\textcolor{themecolour}{\faMousePointer}%
+	\hspace{1pt} \href{https://\site}{\site}
+}
+
+\newcommand*{\setloc}{%
+	\textcolor{themecolour}{\faMapMarker}%
+	\hspace{1pt} \loc 
+}
+
+\newcommand*{\setlinkedin}{%
+	\textcolor{themecolour}{\faLinkedin}%
+	\hspace{1pt}
+	\href{https://www.linkedin.com/in/\linkedin/}{linkedin.com/in/\linkedin}
+}
+
+\newcommand*{\setphone}{%
+	\textcolor{themecolour}{\faPhone}%
+	\hspace{1pt} \phone
+}
+
+\newcommand*{\printdetails}{%
+	\hspace*{\fill}
+	\setsite \hfill \setphone \hfill \setloc
+	\hspace*{\fill}
+
+	\hspace*{\fill}
+	\setemail \hfill \setlinkedin
+	\hspace*{\fill} \par
+}
+
+\newcommand*{\themerule}{%
+	\color{themecolour}\rule{\textwidth}{1.75pt}\color{textcolour}
+}
+
+\newcommand{\cvsection}[1]{%
+	\parindent0pt
+	\bigskip\color{themecolour}{\huge{#1}}
+	\vspace{-7pt}\\
+	\themerule\par
+}
+
+% Use as \edentry{Institute}{Qualification}{Date}
+\newcommand{\edentry}[3]{%
+	\textbf{#1}\par
+	\faIcon{graduation-cap} \textsl{#2} \hfill \faIcon[regular]{calendar} \textsl{#3}\vspace{2mm}\par
+}
+
+% Use as \comentry{awesomefont5 symbol}{details} 
+\newcommand{\comentry}[2]{%
+	\begin{itemize}[
+		align=left,
+		leftmargin=2em,
+  		itemindent=0pt,
+  		labelsep=0pt,
+ 		labelwidth=2em]
+	\item[\faIcon{#1}] #2
+	\end{itemize}
+}
+
+\newcommand{\awentry}[3]{%
+	\textbf{#1}\par
+        \faIcon{trophy} \textsl{#2} \hfill \faIcon[regular]{calendar} \textsl{#3}\vspace{2mm}\par
+}
+
+\newcommand{\statement}[1]{%
+	\vspace{-1mm}
+	\parindent0pt
+	\begin{center}
+		\textsl{#1}
+	\end{center}
+	\vspace{-4mm}
+}
+
