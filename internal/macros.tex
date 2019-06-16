@@ -1,7 +1,7 @@
 \newcommand{\name}[1]{%
 	\begin{center}
 		\huge{\textbf{\uppercase{#1}}}
-	\end{center}\vspace{-2mm}\par
+	\end{center}\vspace{-1mm}\par
 }
 
 \newcommand*{\email}[1]{\def\email{#1}}
@@ -9,30 +9,37 @@
 \newcommand*{\loc}[1]{\def\loc{#1}}
 \newcommand*{\linkedin}[1]{\def\linkedin{#1}}
 \newcommand*{\phone}[1]{\def\phone{#1}}
+\newcommand*{\stack}[1]{\def\stack{#1}}
 
 \newcommand*{\setemail}{%
-	\textcolor{themecolour}{\faEnvelope}%
+	\textcolor{themecolour}{\faIcon{envelope}}%
 	\hspace{1pt} \href{mailto:\email}{\email}
 }
 
 \newcommand*{\setsite}{%
-	\textcolor{themecolour}{\faMousePointer}%
+	\textcolor{themecolour}{\faIcon{mouse-pointer}}%
 	\hspace{1pt} \href{https://\site}{\site}
 }
 
 \newcommand*{\setloc}{%
-	\textcolor{themecolour}{\faMapMarker}%
+	\textcolor{themecolour}{\faIcon{map-marker}}%
 	\hspace{1pt} \loc 
 }
 
 \newcommand*{\setlinkedin}{%
-	\textcolor{themecolour}{\faLinkedin}%
+	\textcolor{themecolour}{\faIcon{linkedin}}%
 	\hspace{1pt}
 	\href{https://www.linkedin.com/in/\linkedin/}{linkedin.com/in/\linkedin}
 }
 
+\newcommand*{\setstack}{%
+	\textcolor{themecolour}{\faIcon{stack-overflow}}%
+	\hspace{1pt}
+	\href{https://stackoverflow.com/users/11021886/\stack?tab=profile}{user:11021886}
+}
+
 \newcommand*{\setphone}{%
-	\textcolor{themecolour}{\faPhone}%
+	\textcolor{themecolour}{\faIcon{phone}}%
 	\hspace{1pt} \phone
 }
 
@@ -42,7 +49,7 @@
 	\hspace*{\fill} \vspace{3pt}
 
 	\hspace*{\fill}
-	\setemail \hfill \setlinkedin
+	\setemail \hfill \setstack \hfill \setlinkedin
 	\hspace*{\fill} \par
 }
 
@@ -60,7 +67,7 @@
 % Use as \edentry{Institute}{Qualification}{Date}
 \newcommand{\edentry}[3]{%
 	\textbf{#1}\par
-	\faIcon{graduation-cap} \textsl{#2} \hfill \faIcon[regular]{calendar} \textsl{#3}\vspace{2mm}\par
+	\faIcon[regular]{graduation-cap} \textsl{#2} \hfill \faIcon[regular]{calendar} \textsl{#3}\vspace{2mm}\par
 }
 
 % Use as \comentry{awesomefont5 symbol}{details} 
@@ -71,13 +78,13 @@
   		itemindent=0pt,
   		labelsep=0pt,
  		labelwidth=2em]
-	\item[\faIcon{#1}] #2
+	\item[{#1}] #2
 	\end{itemize}
 }
 
 \newcommand{\awentry}[3]{%
 	\textbf{#1}\par
-	\faIcon{trophy} \textsl{#2} \hfill \faIcon[regular]{calendar} \textsl{#3}\vspace{2mm}\par
+	\faIcon[regular]{trophy} \textsl{#2} \hfill \faIcon[regular]{calendar} \textsl{#3}\vspace{2mm}\par
 }
 
 \newcommand{\quantentry}[1]{
@@ -87,7 +94,7 @@
   		itemindent=0pt,
   		labelsep=0pt,
  		labelwidth=2em]
-	\item[\faIcon{chart-line}] #1
+	\item[{\faIcon[regular]{chart-line}}] #1
 	\end{itemize}
 }
 
