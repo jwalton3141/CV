@@ -87,6 +87,26 @@
 	\faIcon[regular]{trophy} \textsl{#2} \hfill \faIcon[regular]{calendar} \textsl{#3}\vspace{2mm}\par
 }
 
+\newcommand{\conf}[3]{%
+	\textbf{#1}\par
+	\textsl{#2} \hfill \faIcon[regular]{calendar} \textsl{#3}\vspace{2mm}\par
+}
+
+\newcommand{\talk}[2]{%
+	\faIcon[regular]{microphone} \textsl{#1} \hfill \faIcon[regular]{calendar} \textsl{#2}\vspace{2mm}\par
+}
+
+\newcommand{\teaching}[1]{
+	\begin{itemize}[
+		align=left,
+		leftmargin=2em,
+  		itemindent=0pt,
+  		labelsep=0pt,
+ 		labelwidth=2em]
+	\item[{\faIcon[regular]{chalkboard-teacher}}] #1
+	\end{itemize}
+}
+
 \newcommand{\quantentry}[1]{
 	\begin{itemize}[
 		align=left,
