@@ -1,62 +1,98 @@
+%------------------------------------------------------------------------------
+% Formatting of name
 \newcommand{\name}[1]{%
 	\begin{center}
 		\huge{\textbf{\uppercase{#1}}}
 	\end{center}\vspace{-1mm}\par
 }
+%------------------------------------------------------------------------------
 
+%------------------------------------------------------------------------------
+% Create commands to capture CV parameters
 \newcommand*{\email}[1]{\def\email{#1}}
-\newcommand*{\site}[1]{\def\site{#1}}
-\newcommand*{\loc}[1]{\def\loc{#1}}
+\newcommand*{\website}[1]{\def\website{#1}}
+\newcommand*{\location}[1]{\def\location{#1}}
 \newcommand*{\linkedin}[1]{\def\linkedin{#1}}
 \newcommand*{\phone}[1]{\def\phone{#1}}
-\newcommand*{\stack}[1]{\def\stack{#1}}
+\newcommand*{\stackoverflow}[1]{\def\stackoverflow{#1}}
+%------------------------------------------------------------------------------
 
-\newcommand*{\setemail}{%
-	\textcolor{themecolour}{\faIcon{envelope}}%
-	\hspace{1pt} \href{mailto:\email}{\email}
+%------------------------------------------------------------------------------
+% Card entries have a font awesome icon (#1) and associated text (#2)
+\newcommand*{\cardentry}[2]{\faThemeIcon{#1}\hspace{\icontxtspace}#2}
+
+% Colour font-awesome icons with CV theme colour
+\newcommand*{\faThemeIcon}[1]{\textcolor{themecolour}{\faIcon{#1}}}
+
+% Define length to separate font awesome icon from associated text
+\newlength{\icontxtspace}
+\setlength{\icontxtspace}{.25em}
+
+% Make entry for email address
+\newcommand*{\emailentry}{%
+    \cardentry{envelope}%
+              {\href{mailto:\email}%
+                    {\email}}
 }
 
-\newcommand*{\setsite}{%
-	\textcolor{themecolour}{\faIcon{mouse-pointer}}%
-	\hspace{1pt} \href{https://\site}{\site}
+% Make entry for website
+\newcommand*{\siteentry}{%
+    \cardentry{mouse-pointer}%
+              {\href{https://\website}%
+                    {\website}}
 }
 
-\newcommand*{\setloc}{%
-	\textcolor{themecolour}{\faIcon{map-marker}}%
-	\hspace{1pt} \loc 
+% Make entry for location
+\newcommand*{\locationentry}{%
+    \cardentry{map-marker}%
+              {\location}
 }
 
-\newcommand*{\setlinkedin}{%
-	\textcolor{themecolour}{\faIcon{linkedin}}%
-	\hspace{1pt}
-	\href{https://www.linkedin.com/in/\linkedin/}{linkedin.com/in/\linkedin}
+% Make entry for linkedin
+\newcommand*{\linkedinentry}{%
+    \cardentry{linkedin}%
+              {\href{https://www.linkedin.com/in/\linkedin/}%
+                    {linkedin.com/in/\linkedin}}
 }
 
-\newcommand*{\setstack}{%
-	\textcolor{themecolour}{\faIcon{stack-overflow}}%
-	\hspace{1pt}
-	\href{https://stackoverflow.com/users/11021886/\stack?tab=profile}{user:11021886}
+% Make entry for stackoverflow
+\newcommand*{\stackoverflowentry}{%
+	\cardentry{stack-overflow}%
+	          {\href{https://stackoverflow.com/users/\stackoverflow?tab=profile}%
+                    {user:\stackoverflow}}
 }
 
-\newcommand*{\setphone}{%
-	\textcolor{themecolour}{\faIcon{phone}}%
-	\hspace{1pt} \phone
+% Make entry for phone number
+\newcommand*{\phoneentry}{%
+    \cardentry{phone}%
+              {\phone}
 }
 
-\newcommand*{\printdetails}{%
+% Command to create informational header with contact details and social info
+\newcommand*{\makecard}{%
 	\hspace*{\fill}
-	\setsite \hfill \setphone \hfill \setloc
-	\hspace*{\fill} \vspace{3pt}
-
+	\siteentry \hfill \phoneentry \hfill \locationentry
+	\hspace*{\fill} \vspace{3pt}\\
 	\hspace*{\fill}
-	\setemail \hfill \setstack \hfill \setlinkedin
+	\emailentry \hfill \stackoverflowentry \hfill \linkedinentry
 	\hspace*{\fill} \par
 }
+%------------------------------------------------------------------------------
 
-\newcommand*{\themerule}{%
-	\color{themecolour}\rule{\textwidth}{1.75pt}\color{textcolour}
+%------------------------------------------------------------------------------
+% Formatting of statement
+\newcommand{\statement}[1]{%
+	\vspace{-1mm}
+	\parindent0pt
+	\begin{center}
+		``\textsl{#1}''
+	\end{center}
+	\vspace{-4mm}
 }
+%------------------------------------------------------------------------------
 
+%------------------------------------------------------------------------------
+% Define command for CV sections
 \newcommand{\cvsection}[1]{%
 	\parindent0pt
 	\bigskip\color{themecolour}{\huge{#1}}
@@ -64,14 +100,45 @@
 	\themerule\par
 }
 
-% Use as \edentry{Institute}{Qualification}{Date}
-\newcommand{\edentry}[3]{%
-	\textbf{#1}\par
-	\faIcon[regular]{graduation-cap} \textsl{#2} \hfill \faIcon[regular]{calendar} \textsl{#3}\vspace{2mm}\par
+% Define horizontal rule to use after sections
+\newcommand*{\themerule}{%
+	\color{themecolour}\rule{\textwidth}{1.75pt}\color{textcolour}
+}
+%------------------------------------------------------------------------------
+
+%------------------------------------------------------------------------------
+% Higher level macros for formatting CV entries
+
+% Use as \eduitem{Institution}{Qualification}{Date}
+\newcommand{\eduitem}[3]{\datedfaitem{#1}{\faIcon{graduation-cap}}{#2}{#3}}
+
+% Use as \awarditem{Event}{Award}{Date}
+\newcommand{\awarditem}[3]{\datedfaitem{#1}{\faIcon{trophy}}{#2}{#3}}
+
+% Use as \confitem{Location}{Title}{Date}
+\newcommand{\confitem}[3]{\datedfaitem{#1}{}{#2}{#3}}
+
+% Use as \talkitem{Event}{Title}{Date}
+\newcommand{\talkitem}[3]{\datedfaitem{#1}{\faIcon{microphone}}{#2}{#3}}
+
+% Use as \teachitem{Content}
+\newcommand{\teachitem}[1]{\faitem{\faIcon{chalkboard-teacher}}{#1}}
+
+% Use as \quantitem{Content}
+\newcommand{\quantitem}[1]{\faitem{\faIcon{chart-line}}{#1}}
+%------------------------------------------------------------------------------
+
+%------------------------------------------------------------------------------
+% Lower level macros for formatting CV entries
+
+% Use as \datedfaitem{title}{faicon}{details}{date}
+\newcommand{\datedfaitem}[4]{%
+    \textbf{#1}\par
+    #2 \textsl{#3} \hfill \faIcon[regular]{calendar} \textsl{#4}\vspace{2mm}\par
 }
 
-% Use as \comentry{awesomefont5 symbol}{details} 
-\newcommand{\comentry}[2]{%
+% Use as \faitem{faIcon}{details}
+\newcommand{\faitem}[2]{%
 	\begin{itemize}[
 		align=left,
 		leftmargin=2em,
@@ -81,50 +148,4 @@
 	\item[{#1}] #2
 	\end{itemize}
 }
-
-\newcommand{\awentry}[3]{%
-	\textbf{#1}\par
-	\faIcon[regular]{trophy} \textsl{#2} \hfill \faIcon[regular]{calendar} \textsl{#3}\vspace{2mm}\par
-}
-
-\newcommand{\conf}[3]{%
-	\textbf{#1}\par
-	\textsl{#2} \hfill \faIcon[regular]{calendar} \textsl{#3}\vspace{2mm}\par
-}
-
-\newcommand{\talk}[3]{%
-    \textbf{#1}\par
-	\faIcon[regular]{microphone} \textsl{#2} \hfill \faIcon[regular]{calendar} \textsl{#3}\vspace{2mm}\par
-}
-
-\newcommand{\teaching}[1]{
-	\begin{itemize}[
-		align=left,
-		leftmargin=2em,
-  		itemindent=0pt,
-  		labelsep=0pt,
- 		labelwidth=2em]
-	\item[{\faIcon[regular]{chalkboard-teacher}}] #1
-	\end{itemize}
-}
-
-\newcommand{\quantentry}[1]{
-	\begin{itemize}[
-		align=left,
-		leftmargin=2em,
-  		itemindent=0pt,
-  		labelsep=0pt,
- 		labelwidth=2em]
-	\item[{\faIcon[regular]{chart-line}}] #1
-	\end{itemize}
-}
-
-\newcommand{\statement}[1]{%
-	\vspace{-1mm}
-	\parindent0pt
-	\begin{center}
-		\textsl{#1}
-	\end{center}
-	\vspace{-4mm}
-}
-
+%------------------------------------------------------------------------------
