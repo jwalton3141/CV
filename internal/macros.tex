@@ -2,7 +2,7 @@
 % Formatting of name
 \newcommand{\name}[1]{%
 	\begin{center}
-		\huge{\textbf{\uppercase{#1}}}
+        \huge{\textbf{\uppercase{#1}}}
 	\end{center}\vspace{-1mm}\par
 }
 %------------------------------------------------------------------------------
@@ -10,11 +10,12 @@
 %------------------------------------------------------------------------------
 % Create commands to capture CV parameters
 \newcommand*{\email}[1]{\def\email{#1}}
-\newcommand*{\website}[1]{\def\website{#1}}
-\newcommand*{\location}[1]{\def\location{#1}}
+\newcommand*{\github}[1]{\def\github{#1}}
 \newcommand*{\linkedin}[1]{\def\linkedin{#1}}
+\newcommand*{\location}[1]{\def\location{#1}}
 \newcommand*{\phone}[1]{\def\phone{#1}}
 \newcommand*{\stackoverflow}[1]{\def\stackoverflow{#1}}
+\newcommand*{\website}[1]{\def\website{#1}}
 %------------------------------------------------------------------------------
 
 %------------------------------------------------------------------------------
@@ -37,14 +38,14 @@
 
 % Make entry for website
 \newcommand*{\siteentry}{%
-    \cardentry{mouse-pointer}%
+    \cardentry{globe-europe}%
               {\href{https://\website}%
                     {\website}}
 }
 
 % Make entry for location
 \newcommand*{\locationentry}{%
-    \cardentry{map-marker}%
+    \cardentry{map-marker-alt}%
               {\location}
 }
 
@@ -82,12 +83,11 @@
 %------------------------------------------------------------------------------
 % Formatting of statement
 \newcommand{\statement}[1]{%
-	\vspace{-1mm}
 	\parindent0pt
 	\begin{center}
 		``\textsl{#1}''
 	\end{center}
-	\vspace{-4mm}
+    \vspace{-0.4cm}
 }
 %------------------------------------------------------------------------------
 
@@ -115,6 +115,9 @@
 % Use as \awarditem{Event}{Award}{Date}
 \newcommand{\awarditem}[3]{\datedfaitem{#1}{\faIcon{trophy}}{#2}{#3}}
 
+% Use as \jobitem{Role}{Company}{Date}
+\newcommand{\jobitem}[3]{\datedfaitem{#1}{\faIcon{briefcase}}{#2}{#3}}
+
 % Use as \confitem{Location}{Title}{Date}
 \newcommand{\confitem}[3]{\datedfaitem{#1}{}{#2}{#3}}
 
@@ -134,7 +137,7 @@
 % Use as \datedfaitem{title}{faicon}{details}{date}
 \newcommand{\datedfaitem}[4]{%
     \textbf{#1}\par
-    #2 \textsl{#3} \hfill \faIcon[regular]{calendar} \textsl{#4}\vspace{2mm}\par
+    #2 \textsl{#3} \hfill \faIcon[regular]{calendar-alt} \textsl{#4}\vspace{2mm}\par
 }
 
 % Use as \faitem{faIcon}{details}
