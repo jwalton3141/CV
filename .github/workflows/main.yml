@@ -1,4 +1,4 @@
-name: Build pdf of CV from LaTeX source
+name: Build CV
 on:
   push:
     paths:
