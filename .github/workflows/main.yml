@@ -4,6 +4,7 @@ on:
     paths:
       - cv.tex
       - internal/*
+      - .github/workflows/main.yml
 jobs:
   build_cv:
     runs-on: ubuntu-latest
