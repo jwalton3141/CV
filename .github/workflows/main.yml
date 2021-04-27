@@ -9,14 +9,14 @@ jobs:
   build_cv:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Git repository
+      - name: Checkout
         uses: actions/checkout@v2
       - name: Compile CV
         uses: xu-cheng/latex-action@v2
         with:
           root_file: cv.tex
-          post_compile: "latexmk -C"
-      - name:
+          post_compile: "latexmk -c"
+      - name: Upload artefact
         uses: actions/upload-artifact@v2
         with:
           name: PDF
