@@ -1,0 +1,17 @@
+name: Build pdf of CV from LaTeX source
+on:
+  push:
+    paths:
+      - cv.tex
+      - internal/*
+jobs:
+  build_cv:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: Compile CV
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: cv.tex
+          post_compile: "latexmk -C"
