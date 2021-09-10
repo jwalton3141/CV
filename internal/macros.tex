@@ -69,13 +69,19 @@
               {\phone}
 }
 
+% Make entry for GitHub account
+\newcommand*{\githubentry}{%
+    \cardentry{github}%
+              {\href{https://github.com/\github}%
+                    {\github}}
+}
 % Command to create informational header with contact details and social info
 \newcommand*{\makecard}{%
 	\hspace*{\fill}
-	\siteentry \hfill \phoneentry \hfill \locationentry
+	\siteentry \hfill \stackoverflowentry \hfill \githubentry
 	\hspace*{\fill} \vspace{3pt}\\
 	\hspace*{\fill}
-	\emailentry \hfill \stackoverflowentry \hfill \linkedinentry
+	\emailentry \hfill \phoneentry \hfill \locationentry
 	\hspace*{\fill} \par
 }
 %------------------------------------------------------------------------------
