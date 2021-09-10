@@ -3,7 +3,7 @@ SHELL=/bin/bash
 
 .PHONY: clean cleaner force
 
-$(TARGET).pdf: $(TARGET).tex
+$(TARGET).pdf: $(TARGET).tex internal/
 	pdflatex $(TARGET)
 
 clean:
