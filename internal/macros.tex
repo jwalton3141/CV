@@ -13,6 +13,7 @@
 \newcommand*{\github}[1]{\def\github{#1}}
 \newcommand*{\linkedin}[1]{\def\linkedin{#1}}
 \newcommand*{\location}[1]{\def\location{#1}}
+\newcommand*{\locationurl}[1]{\def\locationurl{#1}}
 \newcommand*{\phone}[1]{\def\phone{#1}}
 \newcommand*{\stackoverflow}[1]{\def\stackoverflow{#1}}
 \newcommand*{\website}[1]{\def\website{#1}}
@@ -43,8 +44,8 @@
 
 % Make entry for location
 \newcommand*{\locationentry}{%
-    \cardentry{map-marker-alt}%
-              {\location}
+    \href{\locationurl}%
+         {\cardentry{map-marker-alt}\location}
 }
 
 % Make entry for linkedin
@@ -104,7 +105,7 @@
 
 \newcommand{\cvsubsection}[1]{%
 	\parindent0pt
-    \bigskip\textcolor{themecolour}{\textbf{\large{#1}}}
+    \bigskip{\hspace{.75em}\textbf{#1}}
 	\vspace{-7pt}\\\par
 }
 

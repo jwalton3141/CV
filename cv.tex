@@ -4,7 +4,8 @@
 \input{internal/formatting}
 \input{internal/macros}
 
-\phone{+44 783 xxxx xxx}
+\phone{+44 (0)7834 xxxxxx}
+\locationurl{https://goo.gl/maps/bEk6nHTSkGxsFm4y6}
 \location{Newcastle upon Tyne, UK}
 \email{jwalton3141@gmail.com}
 \linkedin{jwalton93}
@@ -27,15 +28,47 @@
 
 \cvsection{Employment}
 
-\jobitem{Data Scientist and Engineer}%
+\jobitem{Data Scientist, Trainer and Data Engineer}%
         {Jumping Rivers Ltd.}%
         {2020--Present}
 
-\vspace{-0.15em}
+\vspace{-1em}
+
+\cvsubsection{Notable Client Projects}
+
 \begin{itemize}[
     itemsep=.05em,
     labelwidth=2em,
-    leftmargin=2em,
+    leftmargin=1.5em,
+    topsep=0em]
+
+    \item[] \faitem{\faIcon{aws}} 
+                   {\emph{AWS Lambda for parameterised PDF reports\hfill{}Lead Developer}
+
+                    Created a custom container runtime to serve parameterised PDF reports via
+                    \href{https://rmarkdown.rstudio.com/}{\{rmarkdown\}}.
+
+                    Automated deployment with GitHub Actions and Terraform.}%
+
+    \item[] \faitem{\faIcon{microsoft}} 
+                   {\emph{Azure Databricks for ETL\hfill{}Lead Developer}
+
+                    Administered databricks and wrote init scripts for R workloads.
+
+                    Adapted existing ETL R scripts to write results to blob storage via
+                    \{AzureStor\}.
+                   }
+
+\end{itemize}
+
+\vspace{-.75em}
+
+\cvsubsection{Responsibilities}
+
+\begin{itemize}[
+    itemsep=.05em,
+    labelwidth=2em,
+    leftmargin=1.25em,
     topsep=0em]
 
     \item[] \faitem{\faIcon{python}}
