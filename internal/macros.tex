@@ -31,16 +31,14 @@
 
 % Make entry for email address
 \newcommand*{\emailentry}{%
-    \cardentry{envelope}%
-              {\href{mailto:\email}%
-                    {\email}}
+    \href{mailto:\email}%
+         {\cardentry{envelope}\email}
 }
 
 % Make entry for website
 \newcommand*{\siteentry}{%
-    \cardentry{globe-europe}%
-              {\href{https://\website}%
-                    {\website}}
+    \href{https://\website}%
+         {\cardentry{mouse-pointer}\website}
 }
 
 % Make entry for location
@@ -51,16 +49,14 @@
 
 % Make entry for linkedin
 \newcommand*{\linkedinentry}{%
-    \cardentry{linkedin}%
-              {\href{https://www.linkedin.com/in/\linkedin/}%
-                    {linkedin.com/in/\linkedin}}
+    \href{https://www.linkedin.com/in/\linkedin/}%
+         {\cardentry{linkedin}linkedin.com/in/\linkedin}
 }
 
 % Make entry for stackoverflow
 \newcommand*{\stackoverflowentry}{%
-	\cardentry{stack-overflow}%
-	          {\href{https://stackoverflow.com/users/\stackoverflow?tab=profile}%
-                    {user:\stackoverflow}}
+    \href{https://stackoverflow.com/users/\stackoverflow?tab=profile}%
+         {\cardentry{stack-overflow}user:\stackoverflow}
 }
 
 % Make entry for phone number
@@ -71,10 +67,10 @@
 
 % Make entry for GitHub account
 \newcommand*{\githubentry}{%
-    \cardentry{github}%
-              {\href{https://github.com/\github}%
-                    {\github}}
+    \href{https://github.com/\github}%
+         {\cardentry{github}\github}
 }
+
 % Command to create informational header with contact details and social info
 \newcommand*{\makecard}{%
 	\hspace*{\fill}
@@ -101,9 +97,15 @@
 % Define command for CV sections
 \newcommand{\cvsection}[1]{%
 	\parindent0pt
-	\bigskip\color{themecolour}{\huge{#1}}
+	\bigskip\textcolor{themecolour}{\huge{#1}}
 	\vspace{-7pt}\\
 	\themerule\par
+}
+
+\newcommand{\cvsubsection}[1]{%
+	\parindent0pt
+    \bigskip\textcolor{themecolour}{\textbf{\large{#1}}}
+	\vspace{-7pt}\\\par
 }
 
 % Define horizontal rule to use after sections
