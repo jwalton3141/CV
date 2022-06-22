@@ -1,0 +1,2 @@
+# Tex commands to be ignored in Aspell spell check
+add-tex-command faIcon p

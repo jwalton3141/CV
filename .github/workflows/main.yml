@@ -5,12 +5,20 @@ on:
       - cv.tex
       - internal/*
       - .github/workflows/main.yml
+      - scripts/check_spelling.sh
 jobs:
   build_cv:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Install aspell for spell checking
+        run: sudo apt install -y aspell aspell-en
+      - name: Check for spelling mistakes
+        run: |
+          chmod +x ./scripts/check_spelling.sh
+          ./scripts/check_spelling.sh
+        shell: bash
       - name: Compile CV
         uses: xu-cheng/latex-action@v2
         with:

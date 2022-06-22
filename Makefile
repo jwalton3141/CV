@@ -1,7 +1,7 @@
 TARGET=cv
 SHELL=/bin/bash
 
-.PHONY: clean cleaner force
+.phony: clean cleaner force spell_check
 
 $(TARGET).pdf: $(TARGET).tex internal/
 	pdflatex $(TARGET)
@@ -15,3 +15,6 @@ cleaner: clean
 force:
 	touch $(TARGET).tex
 	$(MAKE)
+
+spell_check:
+	./scripts/check_spelling.sh
