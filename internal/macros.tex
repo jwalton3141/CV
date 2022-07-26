@@ -3,7 +3,7 @@
 \newcommand{\name}[1]{%
 	\begin{center}
         \huge{\textbf{\uppercase{#1}}}
-	\end{center}\vspace{-1mm}\par
+	\end{center}\par
 }
 %------------------------------------------------------------------------------
 
@@ -99,8 +99,8 @@
 \newcommand{\cvsection}[1]{%
 	\parindent0pt
 	\bigskip\textcolor{themecolour}{\huge{#1}}
-	\vspace{-7pt}\\
-	\themerule\par
+	\vspace{-5pt}\\
+    \themerule\vspace{4pt}\par
 }
 
 \newcommand{\cvsubsection}[1]{%
@@ -145,8 +145,8 @@
 
 % Use as \datedfaitem{title}{faicon}{details}{date}
 \newcommand{\datedfaitem}[4]{%
-    \textbf{#1}\par
-    #2 \textsl{#3} \hfill \faIcon[regular]{calendar-alt} \textsl{#4}\vspace{2mm}\par
+    \textbf{#1}\hfill\faIcon[regular]{calendar-alt}\,\textsl{#4}\par
+    #2 \textsl{#3}\vspace{2mm}\par
 }
 
 % Use as \faitem{faIcon}{details}
