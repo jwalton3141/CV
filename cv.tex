@@ -30,7 +30,7 @@
 \eduitem{University of Newcastle upon Tyne, UK}%
         {PhD, Applied Mathematics\\
          \href{https://jwalton.info/assets/thesis.pdf}%
-     {{\footnotesize\faIcon{paperclip}}``Bayesian Inference for Models of Collective Behaviour''}}%
+              {{\footnotesize\faIcon{paperclip}}``Bayesian Inference for Models of Collective Behaviour''}}%
         {2016--2020}
 
 \eduitem{University of Newcastle upon Tyne, UK}%
@@ -40,7 +40,7 @@
 
 \cvsection{Work Experience}
 
-\jobitem{Data Scientist, Trainer and Data Engineer}%
+\jobitem{Data Scientist, Trainer \& Data Engineer}%
         {Jumping Rivers Ltd.}%
         {2020--Present}
 
@@ -54,63 +54,73 @@
     leftmargin=1.5em,
     topsep=0em]
 
-    \item[] \faitem{\faIcon{aws}} 
-                   {\emph{AWS Lambda for parameterised PDF reports\hfill{}Lead Developer}
+    \item[]
+        \faitem{\faIcon{aws}}%
+        {\emph{Serverless \& massively scalable web app with AWS\hfill{}Lead Developer}
 
-                    \sloppy{}Created a custom container runtime with Docker to serve
-                    parameterised PDF reports via
-                    \href{https://rmarkdown.rstudio.com/}{\{rmarkdown\}} and
-                    AWS API Gateway.
+        \sloppy{}Created a custom R runtime with Docker to serve a Bayesian network model,
+        parameterised PDF reports and plots via AWS Lambda and API Gateway
+        (\href{https://github.com/nationalarchives/diagram/tree/live/api}%
+              {\texttt{github.com/nationalarchives/diagram/tree/live/api}}).
 
-                    Automated deployment with GitHub Actions and Terraform.}%
+        Developed Terraform for IaC
+        (\href{https://github.com/nationalarchives/DiAGRAM-terraform/}%
+        {\texttt{github.com/nationalarchives/DiAGRAM-terraform}}).
 
-    \item[] \faitem{\faIcon{microsoft}} 
-                   {\emph{Azure Databricks \& Azure App Service for scalable web apps
-                    \hfill{}Lead Developer}
+        Automated frontend and backend deployment with GitHub Actions.}%
 
-                    Administered Databricks and prepared init scripts for R workloads.
+    \item[]
+        \faitem{\faIcon{microsoft}}%
+        {\emph{Azure Databricks \& App Service for ETL\hfill{}Lead Developer}
 
-                    Adapted existing ETL R scripts to write results to blob storage via
-                    \href{https://cran.r-project.org/web/packages/AzureStor/vignettes/intro.html}%
-                         {\{AzureStor\}}.
+         Administered Databricks and prepared init scripts for R workloads.
 
-                    Improved typical application deploy time from $\sim$20mins to $\sim$2--3mins.}%
+         Adapted existing ETL R scripts to write results to blob storage via
+         \href{https://cran.r-project.org/web/packages/AzureStor/vignettes/intro.html}%
+              {\{AzureStor\}}.
+
+         Improved typical application deploy time from $\sim$20mins to $\sim$2--3mins.}%
 
 \end{itemize}
 
-\vspace{-.75em}
+\vspace{-.4em}
 
 \cvsubsection{Responsibilities \& Achievements}
 
 \begin{itemize}[
     itemsep=.05em,
     labelwidth=2em,
-    leftmargin=1.25em,
+    leftmargin=1.5em,
     topsep=0em]
 
+    \item[] \faitem{\faIcon{layer-group}}%
+                   {Training tech stack lead; prioritised, performed and delegated development
+                    and maintenance work to support delivery of JR training courses. Stack
+                    including: Packer, Docker, Ansible, R packages, the Posit (formerly RStudio)
+                    Team platform, and more.}
+
     \item[] \faitem{\faIcon{python}}
-                   {Taught over 250 hours of Python programming courses, with
-                   course difficulty ranging from ``what is a variable?'' to
-                   machine learning with \texttt{sklearn}.}%
-
-    \item[] \faitem{\faIcon{cloud}}
-                   {Employed Ansible and Terraform to manage, provision and
-                   configure client and internal infrastructure, working with a
-                   number of different cloud providers.}%
-
-    \item[] \faitem{\faIcon{r-project}}
-                   {Collaborated on the development of a suite of R packages to
-                    standardise and simplify internal project management and
-                    automate recurring tasks.}
+                   {Taught over 250 hours of Python programming courses, with course difficulty
+                    ranging from ``what is a variable?'' to machine learning with \texttt{sklearn}.}%
 
     \item[] \faitem{\faIcon{chalkboard-teacher}}
-                   {Developed, curated, and delivered courses on the
-                   probabilistic programming language Stan, best-coding
-                   practices and how to implement them, and getting the most
-                   out of RStudio Connect as a data scientist.}%
+                   {Developed, curated, and delivered courses on the probabilistic programming
+                    language Stan, visualisation in Python, best-coding practices and how to
+                    implement them, and getting the most out of Posit (RStudio) Connect as a data
+                    scientist.}%
+
+    \item[] \faitem{\faIcon{cloud}}
+                   {Employed Ansible and Terraform to manage, provision and configure client and
+                    internal infrastructure, working with a number of different cloud providers.}%
+
+    \item[] \faitem{\faIcon{r-project}}
+                   {Collaborated on the development of a suite of R packages to standardise and
+                    simplify internal project management and automate recurring tasks.}
 
 \end{itemize}
 
+
+\clearpage
 
 \cvsection{Skills}
 
@@ -121,36 +131,47 @@
     topsep=0em]
 
     \item[] \faitem{\faIcon{bullhorn}}
-                   {Confident and competent speaker; adept at communicating
-                   technical concepts to non-technical audiences.}%
+                   {Confident and competent speaker; adept at communicating technical concepts to
+                    non-technical audiences.}%
 
     \item[] \faitem{\faIcon{git}}
-                   {Harnessed version control on all code-based projects, and
-                   used CI/CD tools to aid code stability and enforce
-                   good-coding practices.}%
+                   {Harnessed version control on all code-based projects, and used CI/CD tools to
+                    aid code stability and enforce good-coding practices.}%
+
+    \item[] \faitem{\faIcon{linux}}
+                   {Confident performing all manner of duties from a CLI, scripting in bash, and
+                    using standard command-line tools such as \texttt{ssh}, \texttt{grep},
+                    \texttt{sed}, \texttt{vi}, etc.}%
 
 \end{itemize}
 
 
-\clearpage
-\cvsection{Additional Experience}
+\cvsection{Community}
+
+\faitem{\faIcon{users}}
+       {Chief-organiser and chair of
+        \href{https://www.meetup.com/newcastle-upon-tyne-data-science-meetup/}%
+             {North East Data Science meetup series},
+        overseeing $\sim$50\% growth in group membership. Co-organiser of 
+        \href{https://www.meetup.com/north-east-databricks-meetup/}%
+             {North East Databricks meetup series.}}
 
 \faitem{\faIcon{stack-overflow}}
        {Regular contributor on Stack Overflow---answering over 130 questions,
-       and reaching $>$275k users.}%
+        and reaching $>$275k users.}%
 
 \faitem{\faIcon{mouse-pointer}}
        {Maintainer of \href{https://\website}{\website}, a programming blog and
-       personal website which attracts 800--1000 unique monthly users, with
-       $\sim$85\% of traffic acquired through organic search.}
-
-\teachitem{Worked as a tutor at Newcastle University's maths consultancy
-           service; helping students and staff solve a broad variety of problems
-           with maths and statistics.}
-
+        personal website which attracts 800--1000 unique monthly users, with
+        $\sim$85\% of traffic acquired through organic search.}
 
 
 \cvsection{Awards}
+
+\awarditem{Dynamites22}%
+          {\href{https://www.dynamonortheast.co.uk/dynamites22-shortlist-unveiled/}%{
+                {Rising Star (shortlist)}}%
+          {November 2022}
 
 \awarditem{Northumbrian Water Hackathon}%
           {Best team solution}%
@@ -163,6 +184,11 @@
 \awarditem{EPSRC}%
           {PhD project funding (3.5 years)}%
           {2016--2020}
+
+
+\cvsection{References}
+
+Available on request
 
 
 
