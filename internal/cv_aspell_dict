@@ -1,11 +1,14 @@
 personal_ws-1.1 en 1
 Ansible
 AzureStor
+backend
 CLI
 databricks
 EPSRC
 ETL
+frontend
 Hackathon
+IaC
 init
 jwalton
 mins
@@ -16,6 +19,7 @@ RStudio
 runtime
 scalable
 sed
+Serverless
 sklearn
 Terraform
 Tyne
