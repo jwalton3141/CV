@@ -149,15 +149,21 @@
     #2 \textsl{#3}\vspace{2mm}\par
 }
 
-% Use as \faitem{faIcon}{details}
-\newcommand{\faitem}[2]{%
+% Use as \faitem{faIcon}{leftmargin}{details}
+\newcommand{\faitem}[3]{%
 	\begin{itemize}[
 		align=left,
-		leftmargin=2em,
-  		itemindent=0pt,
-  		labelsep=0pt,
+		leftmargin=#2,
+  		itemindent=0em,
+        topsep=0em,
+  		labelsep=0em,
  		labelwidth=2em]
-	\item[{#1}] #2
+	\item[{#1}] #3
 	\end{itemize}
 }
+%------------------------------------------------------------------------------
+
+%------------------------------------------------------------------------------
+% Define \vbar as a coloured vertical bar
+\newcommand{\vbar}{\textcolor{themecolour}{\;$\vert$}\;}
 %------------------------------------------------------------------------------

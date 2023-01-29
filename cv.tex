@@ -4,7 +4,7 @@
 \input{internal/formatting}
 \input{internal/macros}
 
-\phone{+44 (0)7834 xxxxxx}
+\phone{+44 (0)7834 xxx xxx}
 \locationurl{https://goo.gl/maps/bEk6nHTSkGxsFm4y6}
 \location{Newcastle upon Tyne, UK}
 \email{jwalton3141@gmail.com}
@@ -21,8 +21,9 @@
 
 \makecard
 
-\statement{PhD educated and analytical problem solver enjoys challenging and
+\statement{PhD educated and analytical problem solver seeks challenging and
            intellectually stimulating work}
+
 
 
 \cvsection{Education}
@@ -38,133 +39,151 @@
         {2012--2016}
 
 
-\cvsection{Work Experience}
 
-\jobitem{Data Scientist, Trainer \& Data Engineer}%
-        {Jumping Rivers Ltd.}%
+\cvsection{Experience}
+
+\jobitem{Data Engineer \& Trainer}%
+        {\href{https://www.jumpingrivers.com/}{Jumping Rivers Ltd.}}%
         {2020--Present}
 
 \vspace{-1em}
 
 \cvsubsection{Notable Client Projects}
 
-\begin{itemize}[
-    itemsep=.05em,
-    labelwidth=2em,
-    leftmargin=1.5em,
-    topsep=0em]
+\faitem{\faIcon{aws}}{3.25em}%
+       {\emph{Serverless \& massively scalable web app with AWS\hfill{}Lead Developer}
 
-    \item[]
-        \faitem{\faIcon{aws}}%
-        {\emph{Serverless \& massively scalable web app with AWS\hfill{}Lead Developer}
+       \begin{adjustwidth}{0em}{3em}
 
-        \sloppy{}Created a custom R runtime with Docker to serve a Bayesian network model,
-        parameterised PDF reports and plots via AWS Lambda and API Gateway
-        (\href{https://github.com/nationalarchives/diagram/tree/live/api}%
-              {\texttt{github.com/nationalarchives/diagram/tree/live/api}}).
+       \sloppy{}Used Docker to productionise a Bayesian network model
+       (implemented in R), parameterised PDF report and data visualisation generation,
+       via AWS Lambda and API Gateway
+       (\href{https://github.com/nationalarchives/diagram/tree/live/api}%
+             {\texttt{github.com/nationalarchives/diagram/tree/live/api}}).
 
-        Developed Terraform for IaC
-        (\href{https://github.com/nationalarchives/DiAGRAM-terraform/}%
-        {\texttt{github.com/nationalarchives/DiAGRAM-terraform}}).
+       Developed Terraform for IaC, provisioning development, staging and production environments
+       (\href{https://github.com/nationalarchives/DiAGRAM-terraform/}%
+             {\texttt{github.com/nationalarchives/DiAGRAM-terraform}}).
 
-        Automated frontend and backend deployment with GitHub Actions.}%
+       Automated front and backend deployment, controlling application life
+       cycle with GitHub and GitHub Actions.
 
-    \item[]
-        \faitem{\faIcon{microsoft}}%
-        {\emph{Azure Databricks \& App Service for ETL\hfill{}Lead Developer}
+       \end{adjustwidth}}%
 
-         Administered Databricks and prepared init scripts for R workloads.
+\faitem{\faIcon{microsoft}}{3.25em}%
+       {\emph{Azure Databricks \& App Service for ETL\hfill{}Lead Developer}
 
-         Adapted existing ETL R scripts to write results to blob storage via
-         \href{https://cran.r-project.org/web/packages/AzureStor/vignettes/intro.html}%
-              {\{AzureStor\}}.
+       \begin{adjustwidth}{0em}{3em}
 
-         Improved typical application deploy time from $\sim$20mins to $\sim$2--3mins.}%
+       Administered Databricks and prepared init scripts for R workloads.
 
-\end{itemize}
+       Adapted existing ETL R scripts to write results to blob storage via
+       \href{https://cran.r-project.org/web/packages/AzureStor/vignettes/intro.html}%
+            {\{AzureStor\}}.
+
+       Improved typical application deploy time from $\sim$20mins to $\sim$2--3mins.
+
+       \end{adjustwidth}}%
 
 \vspace{-.4em}
 
 \cvsubsection{Responsibilities \& Achievements}
 
 \begin{itemize}[
-    itemsep=.05em,
+    itemsep=.2em,
     labelwidth=2em,
-    leftmargin=1.5em,
+    leftmargin=3.25em,
     topsep=0em]
 
-    \item[] \faitem{\faIcon{layer-group}}%
-                   {Training tech stack lead; prioritised, performed and delegated development
-                    and maintenance work to support delivery of JR training courses. Stack
-                    including: Packer, Docker, Ansible, R packages, the Posit (formerly RStudio)
-                    Team platform, and more.}
+     \item[\faIcon{layer-group}]%
+       {Training tech stack product owner; prioritised, performed and delegated development and
+       maintenance work to support delivery of JR training courses and acssociated training
+       materials.}
 
-    \item[] \faitem{\faIcon{python}}
-                   {Taught over 250 hours of Python programming courses, with course difficulty
-                    ranging from ``what is a variable?'' to machine learning with \texttt{sklearn}.}%
+     \item[\faIcon{python}]%
+       {Taught over 250 hours of Python programming courses, with course difficulty
+        ranging from ``what is a variable?'' to machine learning with \texttt{sklearn}.}%
 
-    \item[] \faitem{\faIcon{chalkboard-teacher}}
-                   {Developed, curated, and delivered courses on the probabilistic programming
-                    language Stan, visualisation in Python, best-coding practices and how to
-                    implement them, and getting the most out of Posit (RStudio) Connect as a data
-                    scientist.}%
+     \item[\faIcon{chalkboard-teacher}]%
+       {Developed and delivered courses on the probabilistic programming
+        language Stan, data visualisation in Python, best-coding practices and how to
+        implement them, and getting the most out of Posit (RStudio) Connect as a data
+        scientist.}%
 
-    \item[] \faitem{\faIcon{cloud}}
-                   {Employed Ansible and Terraform to manage, provision and configure client and
-                    internal infrastructure, working with a number of different cloud providers.}%
+    \item[\faIcon{cloud}]%
+       {Employed Ansible and Terraform to manage, provision and configure client and
+        internal infrastructure, working with a number of different cloud providers.}%
 
-    \item[] \faitem{\faIcon{r-project}}
-                   {Collaborated on the development of a suite of R packages to standardise and
-                    simplify internal project management and automate recurring tasks.}
+    \item[\faIcon{r-project}]%
+       {Collaborated on the development of a suite of R packages to standardise and
+        simplify internal project management and automate recurring tasks.}
 
 \end{itemize}
-
 
 \clearpage
 
+
+
+
 \cvsection{Skills}
 
+\vspace{-.5em}
+\begin{center}
+    \begin{tabular}{@{}*{10}{c?}@{}}
+        & Python & R &  Stan & bash & git & Ansible & Terraform & Docker & Packer
+    \end{tabular}
+\end{center}
+
 \begin{itemize}[
-    itemsep=.05em,
+    itemsep=.2em,
     labelwidth=2em,
-    leftmargin=0em,
+    leftmargin=2em,
     topsep=0em]
 
-    \item[] \faitem{\faIcon{bullhorn}}
-                   {Confident and competent speaker; adept at communicating technical concepts to
-                    non-technical audiences.}%
+\item[\faIcon{bullhorn}]%
+     {Confident and competent speaker; adept at communicating technical concepts to
+      non-technical audiences.}%
 
-    \item[] \faitem{\faIcon{git}}
-                   {Harnessed version control on all code-based projects, and used CI/CD tools to
-                    aid code stability and enforce good-coding practices.}%
+\item[\faIcon{linux}]%
+     {Capable of performing all manner of duties from a CLI, scripting in bash, and
+      using standard command-line tools such as \texttt{ssh}, \texttt{grep},
+      \texttt{sed}, \texttt{vi}, etc.}%
 
-    \item[] \faitem{\faIcon{linux}}
-                   {Confident performing all manner of duties from a CLI, scripting in bash, and
-                    using standard command-line tools such as \texttt{ssh}, \texttt{grep},
-                    \texttt{sed}, \texttt{vi}, etc.}%
+\item[\faIcon{git}]%
+     {``Intermediate'' git user, harnessing version control on all code-based
+      projects, and using CI/CD tools to aid code stability, dictate release cycles,
+      and enforce good-coding practices.}%
 
 \end{itemize}
+
 
 
 \cvsection{Community}
 
-\faitem{\faIcon{users}}
-       {Chief-organiser and chair of
-        \href{https://www.meetup.com/newcastle-upon-tyne-data-science-meetup/}%
-             {North East Data Science meetup series},
-        overseeing $\sim$50\% growth in group membership. Co-organiser of 
-        \href{https://www.meetup.com/north-east-databricks-meetup/}%
-             {North East Databricks meetup series.}}
+\begin{itemize}[
+    itemsep=.2em,
+    labelwidth=2em,
+    leftmargin=2em,
+    topsep=0em]
 
-\faitem{\faIcon{stack-overflow}}
-       {Regular contributor on Stack Overflow---answering over 130 questions,
-        and reaching $>$275k users.}%
+\item[\faIcon{users}]%
+     {Chief-organiser and chair of
+      \href{https://www.meetup.com/newcastle-upon-tyne-data-science-meetup/}%
+           {North East Data Science meetup series},
+      overseeing $\sim$50\% growth in group membership. Co-organiser of
+      \href{https://www.meetup.com/north-east-databricks-meetup/}%
+           {North East Databricks meetup series.}}
 
-\faitem{\faIcon{mouse-pointer}}
-       {Maintainer of \href{https://\website}{\website}, a programming blog and
-        personal website which attracts 800--1000 unique monthly users, with
-        $\sim$85\% of traffic acquired through organic search.}
+\item[\faIcon{stack-overflow}]%
+     {Regular contributor on Stack Overflow---answering over 130 questions,
+      and reaching $>$275k users.}%
 
+\item[\faIcon{mouse-pointer}]%
+     {Maintainer of \href{https://\website}{\website}, a programming blog and
+      personal website which attracts 800--1000 unique monthly users, with
+      $\sim$85\% of traffic acquired through organic search.}
+
+\end{itemize}
 
 \cvsection{Awards}
 
@@ -184,12 +203,5 @@
 \awarditem{EPSRC}%
           {PhD project funding (3.5 years)}%
           {2016--2020}
-
-
-\cvsection{References}
-
-Available on request
-
-
 
 \end{document}
