@@ -13,8 +13,7 @@ cleaner: clean
 	rm $(TARGET).pdf
 
 force:
-	touch $(TARGET).tex
-	$(MAKE)
+	$(MAKE) -B
 
 spell_check:
 	./scripts/check_spelling.sh
