@@ -7,7 +7,7 @@ $(TARGET).pdf: $(TARGET).tex internal/
 	pdflatex $(TARGET)
 
 clean:
-	rm -f $(TARGET).{aux,log,out,synctex.gz,fls}
+	rm -f $(TARGET).{aux,log,out,synctex.gz,fls,fdb_latexmk}
 
 cleaner: clean
 	rm $(TARGET).pdf
