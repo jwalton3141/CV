@@ -4,7 +4,7 @@ AzureStor
 backend
 CLI
 databricks
-EPSRC
+DigitalOcean
 ETL
 frontend
 Hackathon
@@ -16,6 +16,7 @@ Multiscale
 Northumbrian
 rmarkdown
 productionise
+Repos
 RStudio
 runtime
 scalable
