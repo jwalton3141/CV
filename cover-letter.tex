@@ -1,0 +1,81 @@
+\documentclass[12pt, a4paper]{article}
+
+\input{internal/packages}
+\input{internal/formatting}
+\input{internal/macros}
+
+\phone{+44 (0)7834 xxx xxx}
+\locationurl{https://goo.gl/maps/bEk6nHTSkGxsFm4y6}
+\location{Newcastle upon Tyne, UK}
+\email{jwalton3141@gmail.com}
+\linkedin{jwalton93}
+\website{jwalton.info}
+\stackoverflow{11021886}
+\github{jwalton3141}
+
+\geometry{left=20mm, right=20mm, top=40mm, bottom=10mm}
+
+\setlength\parindent{0pt}
+
+\begin{document}
+
+\begin{minipage}[t]{0.6\textwidth}
+{\huge\bf{}Jack Walton}\\[-.65em]
+
+{\large{}\color{themecolour}{\emph{Data Engineer \& Trainer}}}\\[3em]
+
+\textcolor{gray}{\small\emph{To:}}
+
+{\large
+
+Person
+
+Role
+
+Department
+
+Company
+
+}
+\end{minipage}%
+\begin{minipage}[t]{0.4\textwidth}
+\raggedleft
+
+% These should be moved out to internal/macros.text
+\href{mailto:\email}%
+     {\email\hspace{\icontxtspace}\faThemeIcon{envelope}}\\[0.45em]
+
+\phone\hspace{\icontxtspace}\faThemeIcon{phone}\\[0.45em]
+
+\href{\locationurl}%
+     {\location\hspace{\icontxtspace}\faThemeIcon{map-marker-alt}}\\[0.45em]
+
+\href{https://www.linkedin.com/in/\linkedin/}%
+     {linkedin.com/in/\linkedin\hspace{\icontxtspace}\faThemeIcon{linkedin}}\\[0.45em]
+
+\href{https://github.com/\github}%
+     {\github\hspace{\icontxtspace}\faThemeIcon{github}}\\[0.45em]
+
+\href{https://\website}%
+     {\website\hspace{\icontxtspace}\faThemeIcon{mouse-pointer}}
+
+\end{minipage}\\[3em]
+
+Dear Person,\\[.75em]
+
+As a well-rounded data-professional, with expertise in both data engineering
+\emph{and} data science, I am writing to apply for the position of (\ldots) at
+(\ldots). I heard about this role via (\ldots).\\
+
+As my attached CV will attest to, (\ldots)\\
+
+I append my CV below for your review, where you will find further details of my
+relevant experience. Thank you for taking the time to consider my
+application.\\
+
+Yours sincerely,\\[2em]
+
+Jack Walton
+
+
+\end{document}
